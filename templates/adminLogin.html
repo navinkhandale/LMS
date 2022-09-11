@@ -1,0 +1,31 @@
+{%extends "base.html" %}
+
+{% block content %}
+<center>
+    <h3>Login As Admin!</h3>
+</center>
+<div>
+    <form method="post">
+        <center>
+            <h2>Admin Login</h2>
+        </center>
+        {% csrf_token %}
+        {% for field in form %}
+        <div>
+            <label>{{ field.label_tag }}</label>
+            <div>
+                {{ field }}
+            </div>
+        </div>
+        {% endfor %}
+
+        <div>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+        </div>
+    </form>
+    <div>Do not have account? <a href="adminsignup">Signup here</a></div>
+</div>
+
+{% endblock %}

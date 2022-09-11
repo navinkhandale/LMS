@@ -1,0 +1,30 @@
+{%extends "base.html" %}
+
+{% block content %}
+<center>
+  <h3>Signup As Admin!</h3>
+</center>
+<div>
+  <form method="post">
+    <center>
+      <h2>Admin Signup</h2>
+    </center>
+    {% csrf_token %}
+    {% for field in form1 %}
+    <div>
+      <label>{{ field.label_tag }}</label>
+      <div>
+        {{ field }}
+      </div>
+    </div>
+    {% endfor %}
+    <div>
+      <div>
+        <button type="submit">Sign Up</button>
+      </div>
+    </div>
+  </form>
+  <div>Already have an account? <a href="studentlogin">Login here</a></div>
+</div>
+
+{% endblock %}

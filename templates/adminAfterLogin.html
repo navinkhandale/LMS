@@ -1,0 +1,27 @@
+{%extends "base.html" %}
+
+{% block content %}
+<br>
+<br>
+<center>
+    <h3>Welcome to Online library !</h3>
+</center>
+<div>
+    <center>
+        <h1>Welcome {{user.first_name}} !</h1>
+    </center>
+    <h5 style="float: inline-end;">
+        <a>
+            Logout
+        </a>
+        </h5>
+    <hr>
+    <p>Option Available For You</p>
+    <div>
+        <a href="#addbook" role="button" aria-pressed="true">Add Book To Library</a><br><br>
+        <a href="#viewbook" role="button" aria-pressed="true">View Available Book</a><br><br>
+        <a href="#issuebook" role="button" aria-pressed="true">Update book</a><br><br>
+        <a href="#viewissuedbook" role="button" aria-pressed="true">Delete book</a><br><br>
+    </div>
+</div>
+{% endblock %}
